@@ -3,18 +3,20 @@ Copy & Paste-able functions for form validation.
 
 ## Structure
 - Form Validation
-  - Checkbox/Radio
-  - Color
-  - Date
-    - Month
-    - Week
-    - Datetime-local
-    - Time
-  - eMail
-  - File
-  - Number
-  - Password
-  - Tel
-  - Text
-  - Time
-  - URL
+  - Well defined
+    - [ ] Tel
+    - [ ] eMail
+    - [ ] Password
+  - Not so well defined
+    - [ ] Checkbox/Radio
+    - [ ] Color
+    - [ ] Date
+      - [ ] Month
+      - [ ] Week
+      - [ ] Datetime-local
+      - [ ] Time
+    - [ ] File
+    - [ ] Number
+    - [ ] Text
+    - [ ] Time
+    - [ ] URL
