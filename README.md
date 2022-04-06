@@ -4,8 +4,28 @@ Projects for my Resume
 ## Planned Projects
 - Web Based
   - Form Validation
+    - Checkbox/Radio
+    - Color
+    - Date
+      - Month
+      - Week
+      - Datetime-local
+      - Time
+    - eMail
+    - File
+    - Number
+    - Password
+    - Tel
+    - Text
+    - Time
+    - URL
   - Color Coder
   - Cart & Checkout
+    - Add item
+    - Change Qty
+    - Remove item
+    - Checkout
+      - CC Validation
 - C++
   - Bank Management System
     - Account Admin Functions
