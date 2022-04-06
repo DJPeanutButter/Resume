@@ -1,0 +1,18 @@
+<doctype html>
+<html>
+  <head>
+    <title>Color Coder</title>
+    <script src="colorCoder.js"></script>
+  </head>
+  <body>
+    <label for="inp">Select a file to convert</label>
+    <input type="file" id="inp" onchange="getFile(this)">
+    <br>
+    <canvas id="main-canvas" height=100></canvas>
+    <br>
+    <label for="inpDecode">Select an image to decode</label>
+    <input type="file" id="inpDecode" onchange="getFile(this, false)">
+    <br>
+    <a id="download-link" download href="javascript:alert('Nothing to download!');">Download</a>
+  </body>
+</html>
