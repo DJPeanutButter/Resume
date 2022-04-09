@@ -4,7 +4,7 @@ function getFile (inp, encode=true){
   let fr = new FileReader();
 
   if (encode){
-    fr.readAsText(file);
+    fr.readDataUrl(file);
     fr.onload = function(){
       let hexCodes = colorCode (fr.result, file['name']);
       let imgMain = document.getElementById ("main-canvas");
