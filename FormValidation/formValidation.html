@@ -1,0 +1,79 @@
+<doctype html>
+<html>
+  <head>
+    <title>Form Validations</title>
+    <script src="formValidation.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form method="get">
+      <table>
+        <tr>
+          <td>
+            <label class="switch">
+              <input type="checkbox" id="server-side" checked onchange="handleSwitch(this,document.getElementById('server-side-label'))">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td id="server-side-label">Server Side Validation</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fName">First Name</label>
+          </td>
+          <td>
+            <input type="text" name="fName" id="fName">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lName">Last Name</label>
+          </td>
+          <td>
+            <input type="text" name="lName" id="lName">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="phone">Phone Number</label>
+          </td>
+          <td>
+            <input type="tel" name="phone" id="phone">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">eMail</label>
+          </td>
+          <td>
+            <input type="email" name="email" id="email">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pass">Password</label>
+          </td>
+          <td>
+            <input type="password" name="pass" id="pass">
+          </td>
+        </tr>
+        <tr id="password-validation" class="hidden">
+          <td></td>
+          <td>
+            <p class="invalid" id="pass-lower">1 lowercase letter</p>
+            <p class="invalid" id="pass-upper">1 capital letter</p>
+            <p class="invalid" id="pass-nums">1 number</p>
+            <p class="invalid" id="pass-len">8 characters</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="test" onclick="handleButton(document.getElementById('server-side'))">
+          </td>
+          <td></td>
+        </tr>
+      </table>
+      
+    </form>
+  </body>
+</html>
