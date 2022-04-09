@@ -4,10 +4,10 @@ Copy & Paste-able functions for form validation.
 ## Structure
 - Form Validation
   - Well defined
-    - [ ] Name
-    - [ ] Tel
-    - [ ] eMail
-    - [ ] Password
+    - [x] Name
+    - [x] Tel
+    - [x] eMail
+    - [x] Password
   - Not so well defined
     - [ ] Checkbox/Radio
     - [ ] Color
