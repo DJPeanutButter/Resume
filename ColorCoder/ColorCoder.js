@@ -100,8 +100,7 @@ function colorDecode(imgInp){
     retVal += String.fromCharCode(p[1]);
     retVal += String.fromCharCode(p[2]);
   }
-  while(retVal[-1]===String.fromCharCode(0) ||
-        retVal[-1]===String.fromCharCode(32))
+  while(retVal[retVal.length-1]===String.fromCharCode(0))
     retVal = retVal.substr(0,retVal.length-1);
   return [name.substring(0,name.length-1), retVal];
 }
