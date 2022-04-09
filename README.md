@@ -3,7 +3,7 @@ Projects for my Resume
 
 ## Planned Projects
 - Web Based
-  - [ ] Form Validation
+  - [x] Form Validation
   - [ ] Color Coder
   - [ ] Cart & Checkout
 - C++
