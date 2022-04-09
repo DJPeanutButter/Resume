@@ -4,3 +4,6 @@
 - [ ] Build Form
 - [ ] Remove Whitespace & Returns
 - [ ] Add Desired Returns & Whitespaces
+  - [ ] JavaScript
+  - [ ] HTML
+  - [ ] C++
