@@ -4,11 +4,25 @@
     <title>Code Beautifier</title>
   </head>
   <body>
-    <input type="file" id="inpFile">
-    <select id="inpLang">
-      <option value="js">JavaScript</option>
-      <option value="html">HTML</option>
-      <option value="cpp">C++</option>
-    </select>
+    <table>
+      <tr>
+        <td>
+          <label for="inpFile">Source File</label>
+        </td>
+        <td><input type="file" id="inpFile"></td>
+      </tr>
+      <tr>
+        <td>
+          <label for="inpLang">Language</label>
+        </td>
+        <td>
+          <select id="inpLang">
+            <option value="js">JavaScript</option>
+            <option value="html">HTML</option>
+            <option value="cpp">C++</option>
+          </select>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
