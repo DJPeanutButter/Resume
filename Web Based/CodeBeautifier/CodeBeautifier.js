@@ -28,39 +28,44 @@ function beautify(){
   fr.onload = function (){
     let tmpLines = fr.result.replace(/\s\s+/g, ' ').split(' ');
     let retVal = "";
+    let indent = 0;
     
     console.log (tmpLines);
     
-    if (inpType.value === "text/html")
-      for (let i=0, indent=0;i<tmpLines.length;++i){
-        while (tmpLines[i][tmpLines[i].length-1] === " ")
-          tmpLines[i] = tmpLines[i].substr(0, tmpLines[i].length-1);
-        
-        if (tmpLines[i].length === 0)
-          continue;
-        
-        for (let j=0;j<indent;++j)
-          retVal += "  ";
-        
-        retVal += "<";
-        
-        retVal += tmpLines[i];
-        
-        if (tmpLines[i][tmpLines[i].length - 1] === ">"){
-          console.log ("T");
-          if (tmpLines[i][0] === "/")
+    if (inpType.value === "text/html"){
+      let strLine = "";
+      for (let i=0;i<tmpLines.length;++i)
+        strLine += tmpLines[i] + " ";
+      for (let i=0;i<strLine.length;++i){
+        if (strLine[i] === "<"){
+          let tmp = htmlGetTag(strLine.substr(i,strLine.length-i));
+          for (let j=0;j<indent;++j)
+            retVal += "  ";
+          retVal += tmp + "\r\n";
+          if (tmp[1] === "/")
             --indent;
-          else
+          else if(tmp[1] !== "!")
             ++indent;
+          console.log(indent);
         }
-        
-        retVal += "\r\n";
       }
-    else
+    }else
       console.log (inpType.value);
     
     txtMain.value = retVal;
     console.log (retVal);
   }
   
+}
+
+function htmlGetTag(strFile){
+  let retVal = "";
+  for (let i=0;i<strFile.length;++i){
+    if(i===strFile.length-1)
+      return "No end found!";
+    retVal += strFile[i];
+    if (strFile[i]===">")
+      break;
+  }
+  return retVal;
 }
